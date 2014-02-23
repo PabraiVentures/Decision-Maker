@@ -10,7 +10,8 @@
 
 @interface SingleResultViewController : UIViewController
 @property (weak, nonatomic) IBOutlet ADBannerView *adView;
-@property (weak, nonatomic) IBOutlet UILabel *results;
+@property (weak, nonatomic) IBOutlet UITextView *results;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollview;
 - (IBAction)goHome:(id)sender;
 
 @end

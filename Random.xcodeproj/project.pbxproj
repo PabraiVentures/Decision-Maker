@@ -477,6 +477,7 @@
 				93082A4918B9248700B6A1AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93082A4A18B9248700B6A1AF /* Build configuration list for PBXNativeTarget "RandomTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +486,7 @@
 				93082A4C18B9248700B6A1AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,6 +10,7 @@
 #import <iAd/iAd.h>
 @interface A4ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet ADBannerView *adView;
+- (IBAction)exit:(id)sender;
 - (IBAction)singlePressed:(id)sender;
 - (IBAction)rankedPressed:(id)sender;
 @end

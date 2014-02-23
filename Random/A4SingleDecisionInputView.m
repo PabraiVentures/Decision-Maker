@@ -131,6 +131,7 @@
   [self.choiceView setContentSize:CGSizeMake(self.choiceView.frame.size.width, self.choiceView.frame.size.height)];
   if ([appdelegate.choices count]>0){
     //WE NEED TO PUT THE OLD DATA BACK!
+    [self.decTitle setText:appdelegate.title];
     int filled=0;
     for (NSString* choice in appdelegate.choices){
       //for each choice
@@ -276,6 +277,7 @@
   appdelegate.choicetext=nil;
   appdelegate.weights=nil;
   appdelegate.results=nil;
+  appdelegate.title=nil;
   [self performSegueWithIdentifier:@"goHome" sender:nil];
 
 }
@@ -352,7 +354,7 @@
   appdelegate.choicetext=((UITextView*)[self.choices objectAtIndex:highest  ]).text;
   appdelegate.choices= [[NSMutableArray alloc]init];
   appdelegate.weights= [[NSMutableArray alloc] init];
-  
+  appdelegate.title=self.decTitle.text;
   
   for (UITextView* tv in self.choices){
     

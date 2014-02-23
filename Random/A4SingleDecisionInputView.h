@@ -19,5 +19,6 @@
 @property (strong, nonatomic) IBOutlet UITextView *decision;
 @property (weak, nonatomic) IBOutlet UIButton *delButton;
 @property (weak, nonatomic) IBOutlet ADBannerView *ad1;
+@property (weak, nonatomic) IBOutlet UITextView *decTitle;
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
 @end

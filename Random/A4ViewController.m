@@ -33,6 +33,10 @@
 }
 
 
+- (IBAction)exit:(id)sender {
+  exit(0);
+}
+
 - (IBAction)singlePressed:(id)sender {
   A4AppDelegate* appdelegate = (A4AppDelegate *)[UIApplication sharedApplication].delegate;
   appdelegate->single=true;

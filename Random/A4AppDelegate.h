@@ -20,6 +20,8 @@
 @property (strong,nonatomic) NSMutableArray *choices;
 @property (strong,nonatomic) NSMutableArray *weights;
 @property (strong,nonatomic) NSString *choicetext;
+@property (strong,nonatomic) NSString *title;
+
 
 @property(retain,nonatomic) A4SingleDecisionInputView* singleInputView;
 

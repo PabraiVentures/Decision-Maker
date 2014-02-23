@@ -35,7 +35,8 @@
 	// Do any additional setup after loading the view.
   A4AppDelegate* appdelegate = (A4AppDelegate *)[UIApplication sharedApplication].delegate;
   if (appdelegate->single){
-  self.results.text=appdelegate.choicetext;
+    
+  self.results.text=[NSString stringWithFormat:@"%@\nResult\n%@",appdelegate.title,appdelegate.choicetext];
   }
   else {
     NSMutableArray *rankedarray= [[NSMutableArray alloc]init];
@@ -70,8 +71,20 @@
     
     }
     
-    NSLog(@"The Ranked results: %@" ,rankedarray);
-    self.results.text=[NSString stringWithFormat:@"Results:\n%@",rankedarray];
+    NSLog(@"%@\nThe Ranked results: %@",appdelegate.title ,rankedarray);
+    NSString *resultstring=[NSString stringWithFormat:@"%@\nResults:",appdelegate.title];
+    int cnt=1;
+    for(NSString* string in rankedarray){
+      resultstring=[NSString stringWithFormat:@"%@ \n%d. %@",resultstring,cnt,string];
+      cnt++;
+      NSLog(@"res is %@",resultstring);
+    
+    }
+    
+    [self.scrollview setContentSize:CGSizeMake(self.scrollview.frame.size.width, 25*(cnt+3))];
+    [self.results setFrame:CGRectMake(0,10,self.scrollview.frame.size.width, 25*(3+cnt))];
+    
+    [self.results setText: resultstring];
     
  
     
@@ -92,6 +105,7 @@
   appdelegate.choicetext=nil;
   appdelegate.weights=nil;
   appdelegate.results=nil;
+  appdelegate.title=nil;
   [self performSegueWithIdentifier:@"toHome" sender:nil];
 
 }

@@ -41,6 +41,9 @@
                                 <state key="normal" title="Exit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="exit:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zfT-n3-NH5"/>
+                                </connections>
                             </button>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6lT-5U-FiU">
                                 <rect key="frame" x="0.0" y="518" width="320" height="50"/>
@@ -150,6 +153,7 @@
                         <outlet property="ad1" destination="R7h-jH-sfz" id="4bC-Om-hPd"/>
                         <outlet property="addButton" destination="uN4-Ub-d9V" id="gML-r0-z0R"/>
                         <outlet property="choiceView" destination="37C-fu-xGP" id="rlt-JV-DXb"/>
+                        <outlet property="decTitle" destination="jW8-Iv-qKb" id="4Fi-34-Ldk"/>
                         <outlet property="decision" destination="jW8-Iv-qKb" id="9jY-aC-eog"/>
                         <outlet property="delButton" destination="1Vu-uB-WHi" id="wDk-sY-M6w"/>
                         <segue destination="snq-7J-uzV" kind="modal" identifier="toSingleResult" id="KvV-Rx-Oxh"/>
@@ -188,12 +192,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pu4-wH-rAb">
-                                <rect key="frame" x="50" y="190" width="220" height="127"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5uq-14-FKk">
                                 <rect key="frame" x="50" y="466" width="35" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -204,12 +202,26 @@
                                     <segue destination="hFz-HE-sYv" kind="modal" id="vdm-JS-I87"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="jVt-SO-MNX">
+                                <rect key="frame" x="20" y="59" width="280" height="368"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Result" id="lUK-S6-EXc">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="368"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="adView" destination="OqP-4K-d2A" id="giK-vY-BwZ"/>
-                        <outlet property="results" destination="pu4-wH-rAb" id="Pca-MN-VfV"/>
+                        <outlet property="results" destination="lUK-S6-EXc" id="Prn-O9-i42"/>
+                        <outlet property="scrollview" destination="jVt-SO-MNX" id="WzY-CX-91W"/>
                         <segue destination="vXZ-lx-hvc" kind="modal" identifier="toHome" id="azs-iT-QLX"/>
                     </connections>
                 </viewController>
@@ -225,6 +237,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="azs-iT-QLX"/>
-        <segue reference="vdm-JS-I87"/>
+        <segue reference="Hsn-wy-Hr4"/>
     </inferredMetricsTieBreakers>
 </document>
