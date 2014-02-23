@@ -206,7 +206,7 @@
                                 <rect key="frame" x="20" y="59" width="280" height="368"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Result" id="lUK-S6-EXc">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Result" id="lUK-S6-EXc">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="368"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -237,6 +237,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="azs-iT-QLX"/>
-        <segue reference="Hsn-wy-Hr4"/>
+        <segue reference="vdm-JS-I87"/>
     </inferredMetricsTieBreakers>
 </document>
