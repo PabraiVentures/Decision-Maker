@@ -12,6 +12,7 @@
 - (IBAction)decide:(id)sender;
 - (IBAction)addChoice:(UIButton*)sender;
 - (IBAction)remChoice:(id)sender;
+- (IBAction)goHome:(id)sender;
 @property (weak, nonatomic) IBOutlet UIScrollView *choiceView;
 @property (strong,nonatomic) NSMutableArray *choices;
 @property (strong,nonatomic) NSMutableArray *weights;

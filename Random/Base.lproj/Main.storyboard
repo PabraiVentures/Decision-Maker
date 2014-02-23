@@ -56,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-152" y="-430"/>
+            <point key="canvasLocation" x="-330" y="-1291"/>
         </scene>
         <!--Single Decision Input View-->
         <scene sceneID="ZMo-OM-wBc">
@@ -86,7 +86,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oEx-jY-5tD">
-                                <rect key="frame" x="59" y="445" width="203" height="48"/>
+                                <rect key="frame" x="59" y="462" width="203" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.054901964960000001" green="1" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal" title="Make the Decision">
@@ -131,6 +131,17 @@
                                 <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </adBannerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xRq-s8-GTx">
+                                <rect key="frame" x="128" y="413" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99607849120000003" green="0.0039215688589999999" blue="0.054901964960000001" alpha="0.46999999999999997" colorSpace="deviceRGB"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goHome:" destination="hFz-HE-sYv" eventType="touchUpInside" id="Qka-i9-2di"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -142,11 +153,12 @@
                         <outlet property="decision" destination="jW8-Iv-qKb" id="9jY-aC-eog"/>
                         <outlet property="delButton" destination="1Vu-uB-WHi" id="wDk-sY-M6w"/>
                         <segue destination="snq-7J-uzV" kind="modal" identifier="toSingleResult" id="KvV-Rx-Oxh"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="goHome" id="Tah-vm-R4n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imZ-9d-K27" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="510" y="-495"/>
+            <point key="canvasLocation" x="670" y="-1291"/>
         </scene>
         <!--Single Result View Controller-->
         <scene sceneID="d4o-of-MpH">
@@ -157,13 +169,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OWy-e3-GsU">
-                                <rect key="frame" x="110" y="451" width="100" height="59"/>
+                                <rect key="frame" x="205" y="452" width="100" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Home">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="v3B-qG-4ai"/>
+                                    <action selector="goHome:" destination="snq-7J-uzV" eventType="touchUpInside" id="kWp-cB-Awj"/>
                                 </connections>
                             </button>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="OqP-4K-d2A">
@@ -183,9 +195,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5uq-14-FKk">
-                                <rect key="frame" x="104" y="325" width="46" height="30"/>
+                                <rect key="frame" x="50" y="466" width="35" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -198,11 +210,12 @@
                     <connections>
                         <outlet property="adView" destination="OqP-4K-d2A" id="giK-vY-BwZ"/>
                         <outlet property="results" destination="pu4-wH-rAb" id="Pca-MN-VfV"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="toHome" id="azs-iT-QLX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OwS-I9-jIG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1344" y="-70"/>
+            <point key="canvasLocation" x="1236" y="-1954"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -211,6 +224,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Hsn-wy-Hr4"/>
+        <segue reference="azs-iT-QLX"/>
+        <segue reference="vdm-JS-I87"/>
     </inferredMetricsTieBreakers>
 </document>

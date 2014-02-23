@@ -268,6 +268,17 @@
   }
 
 }
+
+- (IBAction)goHome:(id)sender {
+  
+  A4AppDelegate* appdelegate = (A4AppDelegate *)[UIApplication sharedApplication].delegate;
+  appdelegate.choices=nil;
+  appdelegate.choicetext=nil;
+  appdelegate.weights=nil;
+  appdelegate.results=nil;
+  [self performSegueWithIdentifier:@"goHome" sender:nil];
+
+}
 -(void)showErrorAlert:(NSString *)title andMessage: (NSString*)message {
   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil];
   [alert show];

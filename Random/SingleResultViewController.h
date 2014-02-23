@@ -11,5 +11,6 @@
 @interface SingleResultViewController : UIViewController
 @property (weak, nonatomic) IBOutlet ADBannerView *adView;
 @property (weak, nonatomic) IBOutlet UILabel *results;
+- (IBAction)goHome:(id)sender;
 
 @end
