@@ -21,6 +21,9 @@
 		93082A3A18B9248700B6A1AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93082A1C18B9248700B6A1AF /* UIKit.framework */; };
 		93082A4218B9248700B6A1AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93082A4018B9248700B6A1AF /* InfoPlist.strings */; };
 		93082A4418B9248700B6A1AF /* RandomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93082A4318B9248700B6A1AF /* RandomTests.m */; };
+		93082A4E18B92F2100B6A1AF /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93082A4D18B92F2100B6A1AF /* iAd.framework */; };
+		93082A5118B9434B00B6A1AF /* A4SingleDecisionInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93082A5018B9434B00B6A1AF /* A4SingleDecisionInputView.m */; };
+		93082A5418B95C9000B6A1AF /* SingleResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93082A5318B95C9000B6A1AF /* SingleResultViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		93082A3F18B9248700B6A1AF /* RandomTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RandomTests-Info.plist"; sourceTree = "<group>"; };
 		93082A4118B9248700B6A1AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		93082A4318B9248700B6A1AF /* RandomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RandomTests.m; sourceTree = "<group>"; };
+		93082A4D18B92F2100B6A1AF /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		93082A4F18B9434B00B6A1AF /* A4SingleDecisionInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A4SingleDecisionInputView.h; sourceTree = "<group>"; };
+		93082A5018B9434B00B6A1AF /* A4SingleDecisionInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A4SingleDecisionInputView.m; sourceTree = "<group>"; };
+		93082A5218B95C9000B6A1AF /* SingleResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleResultViewController.h; sourceTree = "<group>"; };
+		93082A5318B95C9000B6A1AF /* SingleResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleResultViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93082A4E18B92F2100B6A1AF /* iAd.framework in Frameworks */,
 				93082A1B18B9248700B6A1AF /* CoreGraphics.framework in Frameworks */,
 				93082A1D18B9248700B6A1AF /* UIKit.framework in Frameworks */,
 				93082A1918B9248700B6A1AF /* Foundation.framework in Frameworks */,
@@ -101,6 +110,7 @@
 		93082A1718B9248700B6A1AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93082A4D18B92F2100B6A1AF /* iAd.framework */,
 				93082A1818B9248700B6A1AF /* Foundation.framework */,
 				93082A1A18B9248700B6A1AF /* CoreGraphics.framework */,
 				93082A1C18B9248700B6A1AF /* UIKit.framework */,
@@ -115,6 +125,10 @@
 				93082A2718B9248700B6A1AF /* A4AppDelegate.h */,
 				93082A2818B9248700B6A1AF /* A4AppDelegate.m */,
 				93082A2A18B9248700B6A1AF /* Main.storyboard */,
+				93082A5218B95C9000B6A1AF /* SingleResultViewController.h */,
+				93082A5318B95C9000B6A1AF /* SingleResultViewController.m */,
+				93082A4F18B9434B00B6A1AF /* A4SingleDecisionInputView.h */,
+				93082A5018B9434B00B6A1AF /* A4SingleDecisionInputView.m */,
 				93082A2D18B9248700B6A1AF /* A4ViewController.h */,
 				93082A2E18B9248700B6A1AF /* A4ViewController.m */,
 				93082A3018B9248700B6A1AF /* Images.xcassets */,
@@ -252,6 +266,8 @@
 			files = (
 				93082A2518B9248700B6A1AF /* main.m in Sources */,
 				93082A2918B9248700B6A1AF /* A4AppDelegate.m in Sources */,
+				93082A5418B95C9000B6A1AF /* SingleResultViewController.m in Sources */,
+				93082A5118B9434B00B6A1AF /* A4SingleDecisionInputView.m in Sources */,
 				93082A2F18B9248700B6A1AF /* A4ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

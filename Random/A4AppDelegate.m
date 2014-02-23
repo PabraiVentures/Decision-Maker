@@ -9,10 +9,12 @@
 #import "A4AppDelegate.h"
 
 @implementation A4AppDelegate
-
+@synthesize results,singleInputView;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+  self.choices=[[NSMutableArray alloc]init];
+
     return YES;
 }
 							
